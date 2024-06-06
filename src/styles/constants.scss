@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+//family
+$font:"Roboto", sans-serif;
+
+//Colors
+$pink: #e43a56;
+$white: #ffffff;
+$black: black;
+$pink-back: #f8d2ca;
+
+
+// Buttons
+$colorBlueBtn: linear-gradient(180deg,
+            #a0fafa 0%,
+            #35c8f7 16.67%,
+            #07b9f1 43.23%,
+            #5589d6 94.27%,
+            #5d9cca 100%);
+
+$colorBlueBtnHover: linear-gradient(to bottom, #a0eefc, #6ac9e9, #6698d4);
+
+
+//Input
+$input-back-color: radial-gradient(80% 80%,
+            rgba(146, 213, 241, 0.01),
+            rgba(146, 213, 241, 0.1));
