@@ -44,8 +44,9 @@ function App() {
         <Routes>
          
 
-          <Route path="/" element={<HomeStudentPage />} />
-          <Route path="/schedule-student" element={<ScheduleStudentPage />} />
+          <Route path="/home-student" element={<HomeStudentPage />} />
+          <Route path="/" element={<ScheduleStudentPage />} />
+          {/* <Route path="/schedule-student" element={<ScheduleStudentPage />} /> */}
 
           <Route path="*" element={<Error404 />} />
         </Routes>
