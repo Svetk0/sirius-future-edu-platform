@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { eventsInitial } from "../../../Store/query/content.js";
 
 import Fullcalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -11,11 +10,14 @@ import ruLocale from "@fullcalendar/core/locales/ru";
 import styles from "./ScheduleStudentPage.module.scss";
 
 const ScheduleStudentPage = () => {
-//const eventsInitial = [...initialSchedule];
-  console.log("check: ", eventsInitial);
+ 
+   
 
-  const events = eventsInitial.events.map((event) => {
-    const id = Math.floor(Math.random() * eventsInitial.events.length);
+    const eventsInitial = useSelector((state)=> state.events);
+    console.log("store: ", eventsInitial);
+
+  const events = eventsInitial.map((event) => {
+    const id = Math.floor(Math.random() * eventsInitial.length);
     return {
       id: id,
       title: event.subject + "\n" + event.schedule,
