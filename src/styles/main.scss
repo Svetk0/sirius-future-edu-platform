@@ -2,3 +2,8 @@
 * {
   font-family: $font;
 }
+
+// calendar styles
+.fc-event-title.fc-sticky {
+    white-space: pre-wrap;
+}
