@@ -7,3 +7,15 @@
 .fc-event-title.fc-sticky {
     white-space: pre-wrap;
 }
+
+.App-main-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 7vw 2vw;
+}
+.App-main-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

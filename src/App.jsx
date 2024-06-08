@@ -7,6 +7,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import  Error404  from "./Pages/Error404/Error404.jsx";
 import HomeStudentPage from "./Pages/StudentPage/HomeStudentPage/HomeStudentPage.jsx";
 import ScheduleStudentPage from "./Pages/StudentPage/ScheduleStudentPage/ScheduleStudentPage.jsx";
+import MenuNav from "./Components/MenuNav/MenuNav.jsx";
 
 function App() {
   // const auth = getAuth();
@@ -37,10 +38,13 @@ function App() {
   // if (statusUser === 'loading') return <Spinner />
 
   return (
-    <>
-      <header></header>
+    <div className="App-main-container">
+      <aside><MenuNav /></aside>
+      <div className="App-main-wrapper">
+      <header>Header, welcoming</header>
+  
       <main>
-        <div>App Page</div>
+     
         <Routes>
          
 
@@ -50,9 +54,10 @@ function App() {
 
           <Route path="*" element={<Error404 />} />
         </Routes>
-      </main>
+        </main>
+        </div>
       <footer></footer>
-    </>
+    </div>
   );
 }
 
