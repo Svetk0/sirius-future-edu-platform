@@ -1,6 +1,12 @@
 import logo from "./img/logo.svg";
 import homeIcon from './img/icons/home-icon.svg';
 import scheduleIcon from './img/icons/schedule-icon.svg';
+import faqIcon from './img/icons/faq-icon.svg';
+import headphonesIcon from './img/icons/headphones-icon.svg';
+import libraryIcon from './img/icons/library-icon.svg';
+import puzzleIcon from './img/icons/puzzle-icon.svg';
+import settingsIcon from './img/icons/settings-icon.svg';
+import walletIcon from './img/icons/wallet-icon.svg';
 import achievementsIcon from './img/icons/achievements-icon.svg';
 import styles from './MenuNav.module.scss';
 
@@ -17,7 +23,7 @@ const MenuNav = () => {
     },
     {
       title: 'Оплата',
-      icon: achievementsIcon,
+      icon: walletIcon,
     },
     {
       title: 'Достижения',
@@ -25,23 +31,23 @@ const MenuNav = () => {
     },
     {
       title: 'Тренажеры',
-      icon: achievementsIcon,
+      icon: puzzleIcon,
     },
     {
       title: 'Библиотека',
-      icon: achievementsIcon,
+      icon: libraryIcon,
     },
     {
       title: 'Проверка связи',
-      icon: achievementsIcon,
+      icon: headphonesIcon,
     },
     {
       title: 'Настройки',
-      icon: achievementsIcon,
+      icon: settingsIcon,
     },
     {
       title: 'Вопросы',
-      icon: achievementsIcon,
+      icon: faqIcon,
     }
   ];
   return (

@@ -1,7 +1,8 @@
+@import '../../styles/constants.scss';
 .container {
     width: 236px;
     height: 100%;
-    background-color: bisque;
+    background-color: $light-violet;
     border-radius: 30px;
     
 }

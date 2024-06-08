@@ -10,24 +10,19 @@
 $font:"Roboto", sans-serif;
 
 //Colors
-$pink: #e43a56;
-$white: #ffffff;
-$black: black;
-$pink-back: #f8d2ca;
+$light-violet: #EEEEFF;
+
+$deep-violet:#8D7FC7;
+
+$white: #fff;
+$black: #000;
+$text-violet: #434B74;
+$title-calendar:#323854;
 
 
 // Buttons
-$colorBlueBtn: linear-gradient(180deg,
-            #a0fafa 0%,
-            #35c8f7 16.67%,
-            #07b9f1 43.23%,
-            #5589d6 94.27%,
-            #5d9cca 100%);
-
-$colorBlueBtnHover: linear-gradient(to bottom, #a0eefc, #6ac9e9, #6698d4);
+$colorBtnCal: #DECFFF;
 
 
-//Input
-$input-back-color: radial-gradient(80% 80%,
-            rgba(146, 213, 241, 0.01),
-            rgba(146, 213, 241, 0.1));
+
+
