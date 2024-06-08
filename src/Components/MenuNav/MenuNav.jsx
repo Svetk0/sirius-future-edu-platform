@@ -45,17 +45,17 @@ const MenuNav = () => {
     }
   ];
   return (
-    <>MenuNav
-      <img src={logo} alt="logo" />
-      <div>
+    <div className={ styles.container}>
+      <img className={ styles.logo} src={logo} alt="logo" />
+      <div className={ styles.wrapper}>
         {items.map((item, index) => (
-          <div>
-            <img src={item.icon} alt={item.title + 'иконка'} />
+          <div className={ styles.menuItem}>
+            <img  src={item.icon} alt={item.title + 'иконка'} />
             <div>{ item.title}</div>
           </div>
         ))}
       </div>
-    </>
+    </div>
   )
 }
 
