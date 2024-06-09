@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import logo from "./img/logo.svg";
 
@@ -12,8 +12,10 @@ const MenuNav = () => {
 
 
   return (
-    <div className={ styles.container}>
-      <img className={ styles.logo} src={logo} alt="logo" />
+    <div className={styles.container}>
+      <Link to="/login">
+        <img className={styles.logo} src={logo} alt="logo" />
+        </Link>
       <ul className={ styles.wrapper}>
         {icons.map((item, index) => (
           <li 
