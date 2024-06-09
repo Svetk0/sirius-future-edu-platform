@@ -4,10 +4,12 @@
 // import { setUser } from "./Store/slices/userSlice";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
-import  Error404  from "./Pages/Error404/Error404.jsx";
+import Error404 from "./Pages/Error404/Error404.jsx";
 import HomeStudentPage from "./Pages/StudentPage/HomeStudentPage/HomeStudentPage.jsx";
 import ScheduleStudentPage from "./Pages/StudentPage/ScheduleStudentPage/ScheduleStudentPage.jsx";
 import MenuNav from "./Components/MenuNav/MenuNav.jsx";
+// import Login from "./Pages/AuthPage/Login.jsx";
+// import Registr from "./Pages/AuthPage/Registr.jsx";
 
 function App() {
   // const auth = getAuth();
@@ -39,23 +41,24 @@ function App() {
 
   return (
     <div className="App-main-container">
-      <nav><MenuNav /></nav>
+      <nav>
+        <MenuNav />
+      </nav>
       <div className="App-main-wrapper">
-      <header>Header, welcoming</header>
-  
-      <main>
-     
-        <Routes>
-         
+        <header>Header, welcoming</header>
 
-          <Route path="/home-student" element={<HomeStudentPage />} />
-          <Route path="/" element={<ScheduleStudentPage />} />
-          {/* <Route path="/schedule-student" element={<ScheduleStudentPage />} /> */}
+        <main>
+          <Routes>
+            {/* <Route path="/login" element={<Login />} />
+            <Route path="/registr" element={<Registr />} /> */}
+            <Route path="/home-student" element={<HomeStudentPage />} />
+            <Route path="/" element={<ScheduleStudentPage />} />
+            {/* <Route path="/schedule-student" element={<ScheduleStudentPage />} /> */}
 
-          <Route path="*" element={<Error404 />} />
-        </Routes>
+            <Route path="*" element={<Error404 />} />
+          </Routes>
         </main>
-        </div>
+      </div>
       <footer></footer>
     </div>
   );

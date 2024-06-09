@@ -1,0 +1,55 @@
+@import '../../styles/constants.scss';
+
+
+.link {
+    color: #ff8562;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: $pink;
+}
+
+.bottom-question {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 19px;
+    color: $black;
+    margin-top: 20px;
+}
+
+select {
+    font-size: 12px;
+    line-height: 19px;
+}
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+    padding: 0 30px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.greeting-title {
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #ea5d80;
+
+    @media (max-width: 390px) {
+        font-size: 25px;
+    }
+}
+
+.greeting-text {
+    margin-bottom: 10px;
+}
+
+.form-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+    color: #252525;
+}

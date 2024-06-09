@@ -1,19 +1,25 @@
-import { createStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 // import { setupListeners } from "@reduxjs/toolkit/query/react";
-// import userResucer from "./slices/userSlice";
- import { initialSchedule } from "./query/content";
+ import userReducer from "./slices/userSlice";
+ import scheduleReducer from "./slices/scheduleSlice";
 
-const reducer = (state = initialSchedule, action) => { 
-    switch (action.type) { 
-        case 'ADD_EVENT':
-            console.log('ADD_EVENT');
-            return {
-                
-            };
-        default: return state;
+export const store = configureStore({
+    reducer: {
+        user: userReducer,
+        schedule: scheduleReducer,
+
+
     }
-
 }
-export const store = createStore(
-  reducer);
+  );
 
+//   export const store = configureStore({
+//     reducer: {
+//       user: userResucer,
+//       [contentApi.reducerPath]: contentApi.reducer,
+//     },
+//     middleware: (getDefaultMiddleWare) =>
+//       getDefaultMiddleWare().concat(contentApi.middleware),
+//   });
+//   setupListeners(store.dispatch);
+  

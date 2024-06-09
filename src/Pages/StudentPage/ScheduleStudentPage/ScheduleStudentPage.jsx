@@ -13,7 +13,7 @@ const ScheduleStudentPage = () => {
  
    
 
-    const eventsInitial = useSelector((state)=> state.events);
+    const eventsInitial = useSelector((state)=> state.schedule.events);
     console.log("store: ", eventsInitial);
 
   const events = eventsInitial.map((event) => {
