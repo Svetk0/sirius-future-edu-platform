@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import SignIn from "./components/SignIn";
-
+import styles from './AuthPage.module.scss';
 const LoginPage = () => {
   return (
-    <div>
+    <div className={ styles.container}>
       <h1>Login</h1>
       <SignIn />
       <p>

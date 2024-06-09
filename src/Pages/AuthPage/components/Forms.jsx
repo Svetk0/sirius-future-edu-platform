@@ -7,7 +7,7 @@ const Forms = ({title, handleClick}) => {
     const [pass, setPass] = useState('');
 
   return (
-      <>Forms
+      <>
           <div>
               <input
                   type="email"
