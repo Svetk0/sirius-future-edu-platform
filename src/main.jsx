@@ -13,7 +13,7 @@ initializeApp(firebase);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
- <BrowserRouter>
+ <BrowserRouter basename='/sirius-future-edu-platform/'>
       <Provider store={ store}>
         <App />
         </Provider>
