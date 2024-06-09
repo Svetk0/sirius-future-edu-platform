@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="App-main-container">
-      <aside><MenuNav /></aside>
+      <nav><MenuNav /></nav>
       <div className="App-main-wrapper">
       <header>Header, welcoming</header>
   
