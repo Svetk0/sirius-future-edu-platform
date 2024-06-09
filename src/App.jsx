@@ -12,6 +12,7 @@ import Login from "./Pages/AuthPage/Login.jsx";
 import Registr from "./Pages/AuthPage/Registr.jsx";
 import LoginPage from './Pages/AuthPage/LoginPage.jsx';
 import SignUpPage from './Pages/AuthPage/RegistrationPage.jsx';
+import HomePage from "./Pages/AuthPage/HomePage.jsx";
 function App() {
   // const auth = getAuth();
   // const navigate = useNavigate();
@@ -50,10 +51,11 @@ function App() {
 
         <main>
           <Routes>
+          <Route path="/" element={<HomePage/>} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/sign-up" element={<SignUpPage />} />
             <Route path="/home-student" element={<HomeStudentPage />} />
-            <Route path="/" element={<ScheduleStudentPage />} />
+            <Route path="/schedule" element={<ScheduleStudentPage />} />
             {/* <Route path="/schedule-student" element={<ScheduleStudentPage />} /> */}
 
             <Route path="*" element={<Error404 />} />

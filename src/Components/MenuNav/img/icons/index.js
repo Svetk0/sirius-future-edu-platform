@@ -29,7 +29,7 @@ export  const icons = [
         title: 'Расписание',
           icon: scheduleIcon,
           icon_hover: hoverScheduleIcon,
-          link: '/',
+          link: '/schedule',
       },
       {
         title: 'Оплата',
