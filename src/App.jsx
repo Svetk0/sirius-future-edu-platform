@@ -8,9 +8,10 @@ import Error404 from "./Pages/Error404/Error404.jsx";
 import HomeStudentPage from "./Pages/StudentPage/HomeStudentPage/HomeStudentPage.jsx";
 import ScheduleStudentPage from "./Pages/StudentPage/ScheduleStudentPage/ScheduleStudentPage.jsx";
 import MenuNav from "./Components/MenuNav/MenuNav.jsx";
-// import Login from "./Pages/AuthPage/Login.jsx";
-// import Registr from "./Pages/AuthPage/Registr.jsx";
-
+import Login from "./Pages/AuthPage/Login.jsx";
+import Registr from "./Pages/AuthPage/Registr.jsx";
+import LoginPage from './Pages/AuthPage/LoginPage.jsx';
+import SignUpPage from './Pages/AuthPage/RegistrationPage.jsx';
 function App() {
   // const auth = getAuth();
   // const navigate = useNavigate();
@@ -49,8 +50,8 @@ function App() {
 
         <main>
           <Routes>
-            {/* <Route path="/login" element={<Login />} />
-            <Route path="/registr" element={<Registr />} /> */}
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/sign-up" element={<SignUpPage />} />
             <Route path="/home-student" element={<HomeStudentPage />} />
             <Route path="/" element={<ScheduleStudentPage />} />
             {/* <Route path="/schedule-student" element={<ScheduleStudentPage />} /> */}

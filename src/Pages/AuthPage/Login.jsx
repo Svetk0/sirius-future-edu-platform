@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 //import styles from  "./Auth.module.scss";
-// import Button from "../../Components/Button/Button";
-// import Input from "../../Components/Input/Input";
-//import "../../styles/forms.scss";
-// import Spinner from "../../Components/Spinner/Spinner";
-// import ValidateInputs from "./validateForm";
-// const validate = new ValidateInputs();
-// import HomeAdmin from "../Admin/HomeAdmin/HomeAdmin";
-// import HomeStudent from "../Student/HomeStudent/HomeStudent";
+import Button from "../../Components/Button/Button";
+import Input from "../../Components/Input/Input";
+import "../../styles/forms.scss";
+//import Spinner from "../../Components/Spinner/Spinner";
+import ValidateInputs from "./validateForm";
+const validate = new ValidateInputs();
+//import HomeAdmin from "../Admin/HomeAdmin/HomeAdmin";
+import HomeStudent from "../StudentPage/HomeStudentPage/HomeStudentPage.jsx";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 export default function Login() {

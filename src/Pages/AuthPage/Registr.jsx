@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
-//import { setUser } from '../../Store/slices/userSlice';
+import { setUser } from '../../Store/slices/userSlice';
 //import styles from "./AuthPage.module.scss";
-// import Button from "../../Components/Button/Button";
-// import Input from "../../Components/Input/Input";
-// import ServicesQuestions from '../../Services/ServicesQuestions';
-// import "../../styles/forms.scss"
+import Button from "../../Components/Button/Button";
+import Input from "../../Components/Input/Input";
+//import ServicesQuestions from '../../Services/ServicesQuestions';
+import "../../styles/forms.scss"
 
-// import ValidateInputs from "./validateForm";
-// const validate = new ValidateInputs();
+import ValidateInputs from "./validateForm";
+const validate = new ValidateInputs();
 
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
@@ -74,13 +74,13 @@ export default function Registr() {
         })
         .then((currentUser) => {
           dispatch(setUser(currentUser))
-          ServicesQuestions.createForm({
-            "uid": currentUser.uid,
-            "name": input.firstName,
-            "surname": input.lastName,
-            "groupNum": currentUser.group,
-            "email": currentUser.email,
-          })
+          // ServicesQuestions.createForm({
+          //   "uid": currentUser.uid,
+          //   "name": input.firstName,
+          //   "surname": input.lastName,
+          //   "groupNum": currentUser.group,
+          //   "email": currentUser.email,
+          // })
           updateProfile(auth.currentUser, {
             displayName: input.firstName + ' ' + input.lastName
           }).catch(e => console.error(e))
