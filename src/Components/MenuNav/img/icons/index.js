@@ -23,7 +23,7 @@ export  const icons = [
         title: 'Главная',
         icon: homeIcon,
         icon_hover: hoverHomeIcon,
-        link: '/home',
+        link: '/home-student',
       },
       {
         title: 'Расписание',
