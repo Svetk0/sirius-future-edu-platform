@@ -4,9 +4,11 @@ import logo from "./img/logo.svg";
 
 import { icons }  from './img/icons';
 import styles from './MenuNav.module.scss';
+import { useState } from "react";
 
 const MenuNav = () => { 
 
+  const [isHover, setIsHover] = useState(-1);
 
 
   return (
@@ -18,9 +20,15 @@ const MenuNav = () => {
             key={item.title}
             >
             <NavLink
+              onMouseOver={() => setIsHover(index)}
+                
+              onMouseOut={() => setIsHover(-1)}
               className={styles.menuItem}
               to={item.link}>
-            <img  src={item.icon} alt={item.title} />
+              <img
+                src={ (isHover === index) ? item.icon_hover : item.icon}
+                alt={item.title}
+              />
             <div>{ item.title}</div>
               </NavLink>
         
