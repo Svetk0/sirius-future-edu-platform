@@ -1,0 +1,14 @@
+@import '../../styles/constants.scss';
+.button {
+    width: 100%;
+    height: 40px;
+    color: $color-text;
+    background-color: $colorBtnCal;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+    cursor: pointer;
+
+}

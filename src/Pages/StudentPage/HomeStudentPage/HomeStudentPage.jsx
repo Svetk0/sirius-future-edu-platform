@@ -1,9 +1,14 @@
+import Button  from '../../../Components/Button/Button.jsx';
 import styles from './HomeStudentPage.module.scss';
 
 const HomeStudentPage = () => { 
 
   return (
-    <>HomeStudentPage</>
+    <>HomeStudentPage
+        <Button title = {'Button'} />
+    </>
+
+
   )
 }
 
