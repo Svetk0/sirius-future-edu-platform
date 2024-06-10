@@ -1,8 +1,10 @@
 @import '../../styles/constants.scss';
 
 .container{
+    padding: 50px 0;
+  
     width: fit-content;
-   padding: 30vw 10px;
+  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,4 +13,5 @@
 }
 .forms {
     width: 100%;
+  
 }
