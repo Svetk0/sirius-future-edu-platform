@@ -21,6 +21,13 @@
     flex-direction: column;
     width: 100%;
 }
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
 h1 {
     color: $color-h1 ;
     font-size: 40px;

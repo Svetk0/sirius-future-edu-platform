@@ -1,18 +1,23 @@
-
-
 import { Link } from 'react-router-dom';
 import  SignUp  from './components/SignUp';
+
+import loginLogo from './img/logoLogin.svg';
+import styles from './AuthPage.module.scss';
+
+
 
 const RegistrationPage = () => { 
 
   return (
-    <div>
-    <h1>Sign UP</h1>
-    <SignUp />
-    <p>
-        Already have an account? <Link to="/login">Sign in</Link>   
-    </p>            
-</div>
+    <div className={styles.container}>
+      <img src={ loginLogo} alt="loginLogo" />
+      <h1>Зарегистрироваться</h1>
+      <div className={ styles.forms}>      <SignUp /></div>
+
+      <div>
+        Есть аккаунта <Link to="/login">Войти </Link>
+      </div>
+    </div>
   )
 }
 

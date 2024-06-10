@@ -49,7 +49,7 @@ function App() {
       <div className="App-main-wrapper">
         <header>Header, {isAuth ? 'Welcome '+ email : ( <Link to="/login">Войти</Link>) }  </header>
 
-        <main>
+        <main className="main">
           <Routes>
           <Route path="/" element={<HomePage/>} />
             <Route path="/login" element={<LoginPage />} />

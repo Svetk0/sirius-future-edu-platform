@@ -29,7 +29,7 @@ const SignUp = () => {
   return (
       <div>
           <Forms
-          title="register"
+          title="Зарегистрироваться"
           handleClick={ handleRegistration}
       />
       </div>
