@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-
+import styles from './Forms.module.scss';
 
 const Forms = ({title, handleClick}) => { 
     const [email, setEmail] = useState('');
@@ -8,20 +8,20 @@ const Forms = ({title, handleClick}) => {
 
   return (
       <>
-          <div>
-              <input
+          <div className={ styles.wrapper}>
+              <input className={ styles.input}
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="email"
+                  placeholder="E-mail"
               />
-                     <input
+                     <input className={ styles.input}
                   type="password"
                   value={pass}
                   onChange={(e) => setPass(e.target.value)}
-                  placeholder="password"
+                  placeholder="Пароль"
               />
-              <button
+              <button className={styles.button }
               onClick={() => handleClick(email,pass)}
               >
                   { title}

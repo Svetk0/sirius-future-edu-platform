@@ -30,7 +30,7 @@ const SignIn = () => {
 
   return (
       <div><Forms
-          title='sign in'
+          title='Войти'
           handleClick={ handleLogin} />
       </div>
   )
