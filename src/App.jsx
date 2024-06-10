@@ -14,6 +14,7 @@ import MenuNav from "./Components/MenuNav/MenuNav.jsx";
 import LoginPage from './Pages/AuthPage/LoginPage.jsx';
 import SignUpPage from './Pages/AuthPage/RegistrationPage.jsx';
 import HomePage from "./Pages/AuthPage/HomePage.jsx";
+import Header from "./Components/Header/Header";
 
 function App() {
   const auth = getAuth();
@@ -48,17 +49,17 @@ function App() {
         <MenuNav />
       </nav>
       <div className="App-main-wrapper">
-        <header>Header, {isAuth ? 'Welcome '+ email : ( <Link to="/login">Войти</Link>) }  </header>
-
+        {/* <header>Header, {isAuth ? 'Welcome '+ email : ( <Link to="/login">Войти</Link>) }  </header> */}
+        <header> <Header userName={email}/> </header> 
         <main className="main">
-          <Routes>
-          <Route path="/" element={<HomePage/>} />
+          <Routes className="page-wrapper">
+          <Route path="/logout" element={<HomePage/>} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/sign-up" element={<SignUpPage />} />
             <Route path="/home-admin" element={<AdminPage />} />
             <Route path="/home-student" element={<HomeStudentPage />} />
             <Route path="/schedule" element={<ScheduleStudentPage />} />
-           
+            <Route path="/" element={<ScheduleStudentPage />} />
 
             <Route path="*" element={<Error404 />} />
           </Routes>

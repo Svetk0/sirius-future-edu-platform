@@ -1,0 +1,35 @@
+@import '../../styles/constants.scss';
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+  
+    border-bottom:  2px solid $border-gray;
+    border-bottom-left-radius:  2px solid $border-gray;
+    border-bottom-right-radius:  2px solid $border-gray;
+    border-radius: 0 0 20px 20px;
+    background-color: $white;
+
+
+
+ 
+    
+   
+}
+
+.title_userName {
+    cursor: pointer;
+    color: $colorUserName;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 15px 0;
+    font-weight: 400;
+
+   
+   
+}
+

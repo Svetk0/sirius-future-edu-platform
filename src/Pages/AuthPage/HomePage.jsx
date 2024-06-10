@@ -1,20 +1,21 @@
-import { redirect, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useAuth } from "../../hooks/useAuth";
 import { removeUser } from "../../Store/slices/userSlice";
 import styles from './AuthPage.module.scss';
+import Button from "../../Components/Button/Button";
 const HomePage = () => {
   const dispatch = useDispatch();
   const { isAuth, email } = useAuth();
 
   return isAuth ? (
     <div className={ styles.container} >
-      <h1>Welcome !</h1>
-      <div></div>
+   
+      <Button
+        title={`Выйти из аккаунта   ${email}?`}
+        handleClick={() => dispatch(removeUser())}
+      />
 
-      <button onClick={() => dispatch(removeUser())}>
-        Log out from {email}
-      </button>
     </div>
   ) : (
     <div className={ styles.container}>
