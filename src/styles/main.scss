@@ -1,14 +1,19 @@
 @import './constants.scss';
 * {
   font-family: $font;
+
 }
 
 // calendar styles
 .fc-event-title.fc-sticky {
     white-space: pre-wrap;
+    color: $white;
 }
 .fc {
     width: 100%;
+}
+.fc-icon {
+    color: $white;
 }
 
 .App-main-container {
@@ -32,10 +37,12 @@
     justify-content: center;
     align-items: center;
 }
-h1 {
+h1, h3 {
     color: $color-h1 ;
     font-size: 40px;
-    margin: 15px;
+    margin: 15px 0;
     font-weight: 400;
-
+}
+h3 {
+    font-size: 16px;
 }

@@ -1,0 +1,37 @@
+@import '../../styles/constants.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15px;
+    background-color: #FDFDFF;
+    position: relative;
+}
+
+.text {
+    color: $color-h1 ;
+    font-size: 10px;
+
+    font-weight: 300;
+}
+
+.picture {
+position: absolute;
+bottom: 0px;
+right: 0;
+border-radius: 0 0 15px 0;
+}
+
+.button {
+    padding: 8px 16px;
+    border-radius: 15px;
+    border: none;
+    background-color: $blueBtn;
+    margin-top: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}

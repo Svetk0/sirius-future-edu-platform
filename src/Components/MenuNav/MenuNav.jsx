@@ -1,10 +1,11 @@
 import { NavLink, Link } from "react-router-dom";
-
+import { useState } from "react";
 import logo from "./img/logo.svg";
-
+import ReferalAd from "../ReferalAd/ReferalAd";
 import { icons }  from './img/icons';
 import styles from './MenuNav.module.scss';
-import { useState } from "react";
+
+
 
 const MenuNav = () => { 
 
@@ -33,10 +34,10 @@ const MenuNav = () => {
               />
             <div>{ item.title}</div>
               </NavLink>
-        
           </li>
         ))}
       </ul>
+      <ReferalAd/>
     </div>
   )
 }
