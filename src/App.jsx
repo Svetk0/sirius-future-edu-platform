@@ -6,6 +6,7 @@ import { useAuth } from "./hooks/useAuth";
 import { Routes, Route, useNavigate, Link } from "react-router-dom";
 
 import Error404 from "./Pages/Error404/Error404.jsx";
+import AdminPage from "./Pages/AdminPage/AdminPage.jsx";
 import HomeStudentPage from "./Pages/StudentPage/HomeStudentPage/HomeStudentPage.jsx";
 import ScheduleStudentPage from "./Pages/StudentPage/ScheduleStudentPage/ScheduleStudentPage.jsx";
 import MenuNav from "./Components/MenuNav/MenuNav.jsx";
@@ -54,6 +55,7 @@ function App() {
           <Route path="/" element={<HomePage/>} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/sign-up" element={<SignUpPage />} />
+            <Route path="/home-admin" element={<AdminPage />} />
             <Route path="/home-student" element={<HomeStudentPage />} />
             <Route path="/schedule" element={<ScheduleStudentPage />} />
            

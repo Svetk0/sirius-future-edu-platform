@@ -15,7 +15,7 @@ const RegistrationPage = () => {
       <div className={ styles.forms}>      <SignUp /></div>
 
       <div>
-        Есть аккаунта <Link to="/login">Войти </Link>
+        Есть аккаунт?  <Link className="link-text" to="/login">Войти </Link>
       </div>
     </div>
   )
