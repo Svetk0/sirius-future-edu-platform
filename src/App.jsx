@@ -13,7 +13,7 @@ import MenuNav from "./Components/MenuNav/MenuNav.jsx";
 
 import LoginPage from './Pages/AuthPage/LoginPage.jsx';
 import SignUpPage from './Pages/AuthPage/RegistrationPage.jsx';
-import HomePage from "./Pages/AuthPage/HomePage.jsx";
+import LogOutPage from "./Pages/AuthPage/LogOutPage.jsx";
 import Header from "./Components/Header/Header";
 
 function App() {
@@ -60,7 +60,7 @@ function App() {
         <header> <Header userName={'hi'}/> </header> 
         <main className="main">
           <Routes className="page-wrapper">
-          <Route path="/logout" element={<HomePage/>} />
+          <Route path="/logout" element={<LogOutPage/>} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/sign-up" element={<SignUpPage />} />
             <Route path="/home-admin" element={<AdminPage />} />
