@@ -19,7 +19,7 @@ import Header from "./Components/Header/Header";
 function App() {
   const auth = getAuth();
   console.log('auth', auth);
-  const userName = auth.currentUser.displayName;
+  //const userName = auth.currentUser.displayName;
   //const { isAuth, email } = useAuth();
   const navigate = useNavigate();
   const [statusUser, setStatusUser] = useState('loading')
@@ -53,7 +53,8 @@ function App() {
       </nav>
       <div className="App-main-wrapper">
 
-        <header> <Header userName={userName}/> </header> 
+        {/* <header> <Header userName={userName ? userName : 'Guest' }/> </header>  */}
+        <header> <Header userName={'hi'}/> </header> 
         <main className="main">
           <Routes className="page-wrapper">
           <Route path="/logout" element={<HomePage/>} />
