@@ -56,8 +56,8 @@ function App() {
       </nav>
       <div className="App-main-wrapper">
 
-        {/* <header> <Header userName={userName ? userName : 'Guest' }/> </header>  */}
-        <header> <Header userName={'hi'}/> </header> 
+
+        <header> <Header/> </header> 
         <main className="main">
           <Routes className="page-wrapper">
           <Route path="/logout" element={<LogOutPage/>} />

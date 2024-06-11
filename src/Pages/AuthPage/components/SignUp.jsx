@@ -30,6 +30,8 @@ const SignUp = () => {
             .then((currentUser) => {
                 console.log('currentUser', currentUser);
                 dispatch(setUser(currentUser));
+                navigate('/schedule');
+
                 updateProfile(auth.currentUser, {
                     displayName: dataUser.firstName + ' ' + dataUser.lastName
                   }).catch(e => console.error(e))
