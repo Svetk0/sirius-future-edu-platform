@@ -18,7 +18,9 @@ import Header from "./Components/Header/Header";
 
 function App() {
   const auth = getAuth();
-  const { isAuth, email } = useAuth();
+  console.log('auth', auth);
+  const userName = auth.currentUser.displayName;
+  //const { isAuth, email } = useAuth();
   const navigate = useNavigate();
   const [statusUser, setStatusUser] = useState('loading')
   const dispatch = useDispatch();
@@ -32,7 +34,8 @@ function App() {
           }
           dispatch(
               setUser({
-                  email: currentUser.email,
+                email: currentUser.email,
+                //userName: currentUser.displayName,
                  
               })
           );
@@ -49,8 +52,8 @@ function App() {
         <MenuNav />
       </nav>
       <div className="App-main-wrapper">
-        {/* <header>Header, {isAuth ? 'Welcome '+ email : ( <Link to="/login">Войти</Link>) }  </header> */}
-        <header> <Header userName={email}/> </header> 
+
+        <header> <Header userName={userName}/> </header> 
         <main className="main">
           <Routes className="page-wrapper">
           <Route path="/logout" element={<HomePage/>} />
