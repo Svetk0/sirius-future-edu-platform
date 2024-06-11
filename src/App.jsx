@@ -26,17 +26,20 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-      onAuthStateChanged(auth, (currentUser) => {
-          if (!currentUser) {
+      onAuthStateChanged(auth, (user) => {
+          if (!user) {
               navigate("/login");
               setStatusUser(null)
               return;
           }
           dispatch(
               setUser({
-                email: currentUser.email,
-                //userName: currentUser.displayName,
-                 
+                displayName: user.displayName,
+                    firstName: user.displayName.split(' ')[0],
+                    lastName: user.displayName.split(' ')[1],
+                    email: user.email,
+                    uid: user.uid,
+                    token: user.accessToken,
               })
           );
           navigate('/')

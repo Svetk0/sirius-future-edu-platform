@@ -14,7 +14,7 @@ const ScheduleStudentPage = () => {
    
 
     const eventsInitial = useSelector((state)=> state.schedule.events);
-    console.log("store: ", eventsInitial);
+    //console.log("store: ", eventsInitial);
 
   const events = eventsInitial.map((event) => {
     const id = Math.floor(Math.random() * eventsInitial.length);
@@ -25,7 +25,7 @@ const ScheduleStudentPage = () => {
     };
   });
 
-  console.log("events: ", events);
+
 
   return (
     <>

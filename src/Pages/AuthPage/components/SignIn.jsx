@@ -10,15 +10,19 @@ import { setUser } from '../../../Store/slices/userSlice';
 const SignIn = () => { 
     const navigate = useNavigate();
     const dispatch = useDispatch();
-
+    // var a = str.split('+')[0]; // 50ml
+    // var b = str.split('+')[1];
     const handleLogin = (email, password)  => { 
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
             .then(({user}) => {
                 console.log(user);
                 dispatch(setUser({
+                    displayName: user.displayName,
+                    firstName: user.displayName.split(' ')[0],
+                    lastName: user.displayName.split(' ')[1],
                     email: user.email,
-                    id: user.uid,
+                    uid: user.uid,
                     token: user.accessToken,
                 }));
                 navigate('/');
