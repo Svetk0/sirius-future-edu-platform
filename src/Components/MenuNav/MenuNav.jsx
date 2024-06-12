@@ -7,14 +7,14 @@ import styles from './MenuNav.module.scss';
 
 
 
-const MenuNav = () => { 
+const MenuNav = ({isAuth}) => { 
 
   const [isHover, setIsHover] = useState(-1);
 
 
   return (
     <div className={styles.container}>
-      <Link to="/login">
+      <Link to= "/">
         <img className={styles.logo} src={logo} alt="logo" />
         </Link>
       <ul className={ styles.wrapper}>

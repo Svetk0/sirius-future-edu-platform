@@ -22,7 +22,7 @@ function App() {
   //const userName = auth.currentUser.displayName;
   //const { isAuth, email } = useAuth();
   const navigate = useNavigate();
-  const [statusUser, setStatusUser] = useState("loading");
+
   const [isAuth, setIsAuth] = useState(false);
   const dispatch = useDispatch();
 
@@ -30,7 +30,6 @@ function App() {
     onAuthStateChanged(auth, (user) => {
       if (!user) {
         navigate("/login");
-        setStatusUser(null);
         setIsAuth(false);
         return;
       }
@@ -45,7 +44,6 @@ function App() {
         })
       );
       navigate("/");
-      setStatusUser("successfully");
       setIsAuth(true);
     });
   }, []);
