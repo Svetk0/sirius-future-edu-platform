@@ -11,56 +11,60 @@ import HomeStudentPage from "./Pages/StudentPage/HomeStudentPage/HomeStudentPage
 import ScheduleStudentPage from "./Pages/StudentPage/ScheduleStudentPage/ScheduleStudentPage.jsx";
 import MenuNav from "./Components/MenuNav/MenuNav.jsx";
 
-import LoginPage from './Pages/AuthPage/LoginPage.jsx';
-import SignUpPage from './Pages/AuthPage/RegistrationPage.jsx';
+import LoginPage from "./Pages/AuthPage/LoginPage.jsx";
+import SignUpPage from "./Pages/AuthPage/RegistrationPage.jsx";
 import LogOutPage from "./Pages/AuthPage/LogOutPage.jsx";
 import Header from "./Components/Header/Header";
 
 function App() {
   const auth = getAuth();
-  console.log('auth', auth);
+  console.log("auth", auth);
   //const userName = auth.currentUser.displayName;
   //const { isAuth, email } = useAuth();
   const navigate = useNavigate();
-  const [statusUser, setStatusUser] = useState('loading')
+  const [statusUser, setStatusUser] = useState("loading");
+  const [isAuth, setIsAuth] = useState(false);
   const dispatch = useDispatch();
 
   useEffect(() => {
-      onAuthStateChanged(auth, (user) => {
-          if (!user) {
-              navigate("/login");
-              setStatusUser(null)
-              return;
-          }
-          dispatch(
-              setUser({
-                displayName: user.displayName,
-                    firstName: user.displayName.split(' ')[0],
-                    lastName: user.displayName.split(' ')[1],
-                    email: user.email,
-                    uid: user.uid,
-                    token: user.accessToken,
-              })
-          );
-          navigate('/')
-          setStatusUser('successfully')
-      });
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        navigate("/login");
+        setStatusUser(null);
+        setIsAuth(false);
+        return;
+      }
+      dispatch(
+        setUser({
+          displayName: user.displayName,
+          firstName: user.displayName.split(" ")[0],
+          lastName: user.displayName.split(" ")[1],
+          email: user.email,
+          uid: user.uid,
+          token: user.accessToken,
+        })
+      );
+      navigate("/");
+      setStatusUser("successfully");
+      setIsAuth(true);
+    });
   }, []);
-
-  
 
   return (
     <div className="App-main-container">
-      <nav>
-        <MenuNav />
-      </nav>
+      {isAuth && (
+        <nav>
+          <MenuNav />
+        </nav>
+      )}
       <div className="App-main-wrapper">
-
-
-        <header> <Header/> </header> 
+        <header>
+          {" "}
+          <Header />{" "}
+        </header>
         <main className="main">
           <Routes className="page-wrapper">
-          <Route path="/logout" element={<LogOutPage/>} />
+            <Route path="/logout" element={<LogOutPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/sign-up" element={<SignUpPage />} />
             <Route path="/home-admin" element={<AdminPage />} />

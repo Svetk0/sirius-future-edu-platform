@@ -10,7 +10,8 @@ const LogOutPage = () => {
   const dispatch = useDispatch();
   //const { isAuth, email } = useAuth();
   const auth = getAuth();
-  const email = auth.currentUser.email;
+  const email = auth.currentUser?.email;
+
   const handleSignOut = async () => {
     
     try {
