@@ -2,8 +2,8 @@
 
 .container{
     padding: 50px 0;
-  
-    width: fit-content;
+  min-width: 320px;
+    max-width: fit-content;
   
     display: flex;
     flex-direction: column;

@@ -18,9 +18,7 @@ import Header from "./Components/Header/Header";
 
 function App() {
   const auth = getAuth();
-  console.log("auth", auth);
-  //const userName = auth.currentUser.displayName;
-  //const { isAuth, email } = useAuth();
+  //console.log("auth", auth);
   const navigate = useNavigate();
 
   const [isAuth, setIsAuth] = useState(false);

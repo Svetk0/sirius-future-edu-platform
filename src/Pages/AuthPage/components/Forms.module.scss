@@ -31,3 +31,8 @@ gap: 16px;
     border: 1px solid $light-gray;
     padding: 10px 12px;
 }
+
+.error_message{
+    color: $color-error;
+    font-size: 12px;
+  }

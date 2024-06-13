@@ -11,7 +11,7 @@ const RegistrationPage = () => {
   return (
     <div className={styles.container}>
       <img src={ loginLogo} alt="loginLogo" />
-      <h1>Зарегистрироваться</h1>
+      <h1>Регистрация</h1>
       <div className={ styles.forms}>      <SignUp /></div>
 
       <div>
