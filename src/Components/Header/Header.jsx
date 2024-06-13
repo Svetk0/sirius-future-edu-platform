@@ -4,7 +4,7 @@ import styles from "./Header.module.scss";
 
 const Header = () => {
   const userName = useSelector((state) => state.user);
-  console.log("user store : ", userName);
+ // console.log("user store : ", userName);
   //const dispatch = useDispatch();
   //const { isAuth, email } = useAuth();
   return (

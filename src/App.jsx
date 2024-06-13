@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { setUser } from "./Store/slices/userSlice";
-import { useAuth } from "./hooks/useAuth";
+//import { useAuth } from "./hooks/useAuth";
 import { Routes, Route, useNavigate, Link } from "react-router-dom";
 
 import Error404 from "./Pages/Error404/Error404.jsx";
@@ -20,7 +20,7 @@ function App() {
   const auth = getAuth();
   //console.log("auth", auth);
   const navigate = useNavigate();
-
+  const userName = useSelector((state) => state.user);
   const [isAuth, setIsAuth] = useState(false);
   const dispatch = useDispatch();
 
@@ -45,7 +45,11 @@ function App() {
       setIsAuth(true);
     });
   }, []);
-
+  useEffect(() => {
+    if (userName.email !== null)
+    setIsAuth(true);
+    console.log('user store slice',userName);
+}, [userName]);
   return (
     <div className="App-main-container">
       {isAuth && (

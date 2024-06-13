@@ -47,7 +47,7 @@ const FormsSignUp = ({ title, handleClick }) => {
     let errors = "";
 
     setInput((prev) => ({ ...prev, [name]: value.trim() }));
-    //console.log('input', input);
+
 
     if (name === "lastName" || name === "firstName") {
       setInput((prev) => ({
@@ -66,7 +66,7 @@ const FormsSignUp = ({ title, handleClick }) => {
     if (errors !== "") {
       setInputError((prev) => ({ ...prev, [name + "Error"]: true }));
         setErrorMessage((prev) => ({ ...prev, [name + "ErrorMessage"]: errors }));
-        console.log('errors',errors );
+     
     } else {
         setInputError((prev) => ({ ...prev, [name + "Error"]: false }));
     
